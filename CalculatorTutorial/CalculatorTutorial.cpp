@@ -1,34 +1,19 @@
-﻿// CalculatorTutorial.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
-
+﻿#include "TowerDefenseGame.h"
 #include <iostream>
-#include "Calculator.h"
 
-using namespace std;
+int main() {
+    TowerDefenseGame game;
 
-int main()
-{
-    double x = 0.0;
-    double y = 0.0;
-    double result = 0.0;
-    char oper = '+';
-    cout << "Calculator Console Application" << endl << endl;
-    cout << "Please enter the operation to perform. Format: a+b | a-b | a*b | a/b"
-        << endl;
-    Calculator c;
-    while (true) 
-    {
-        cin >> x >> oper >> y;
-        if (oper == '/' && y == 0)
-        {
-            cout << "被除数不能为0" << endl;
-        } 
-        else
-        {
-            result = c.Calculate(x, oper, y);
-            cout << "Result " << "of" << x << oper << y << "is " << result << endl;
-        }
+    std::cout << "Welcome to Tower Defense Game!" << std::endl;
+    std::cout << "Use W, A, S, D keys to move the player. Avoid the enemy!" << std::endl;
+
+    while (!game.gameOver()) {
+        game.displayMap();
+        char move;
+        std::cout << "Enter your move (W/A/S/D): ";
+        std::cin >> move;
+        game.movePlayer(move);
     }
+
     return 0;
 }
-
