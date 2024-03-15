@@ -16,11 +16,19 @@ int main()
     cout << "Please enter the operation to perform. Format: a+b | a-b | a*b | a/b"
         << endl;
     Calculator c;
-    while (true) {
+    while (true) 
+    {
         cin >> x >> oper >> y;
-        result = c.Calculate(x, oper, y);
-        cout << "Result " << "of" << x << oper << y << "is " << result << endl;
-        return 0;
+        if (oper == '/' && y == 0)
+        {
+            cout << "被除数不能为0" << endl;
+        } 
+        else
+        {
+            result = c.Calculate(x, oper, y);
+            cout << "Result " << "of" << x << oper << y << "is " << result << endl;
+        }
     }
+    return 0;
 }
 
