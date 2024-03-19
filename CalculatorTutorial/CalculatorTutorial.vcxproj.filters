@@ -18,19 +18,5 @@
     <ClCompile Include="CalculatorTutorial.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Calculator.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="TowerDefenseGame.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Calculator.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="TowerDefenseGame.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

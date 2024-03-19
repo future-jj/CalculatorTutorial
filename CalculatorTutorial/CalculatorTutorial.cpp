@@ -1,19 +1,17 @@
-﻿#include "TowerDefenseGame.h"
+﻿
 #include <iostream>
 
+
 int main() {
-    TowerDefenseGame game;
-
-    std::cout << "Welcome to Tower Defense Game!" << std::endl;
-    std::cout << "Use W, A, S, D keys to move the player. Avoid the enemy!" << std::endl;
-
-    while (!game.gameOver()) {
-        game.displayMap();
-        char move;
-        std::cout << "Enter your move (W/A/S/D): ";
-        std::cin >> move;
-        game.movePlayer(move);
-    }
-
+    system("chcp 65001");
+    double i = 1.0;
+    double ptr = 3.14;
+    double const *p1 = &i;
+    //  *p1 = 22.22;
+    p1 = &ptr;
+    std::cout << *p1 << std::endl;
+    std::cout << p1 << std::endl;
+    std::cout << &i << std::endl;
+    std::cout << i << std::endl;
     return 0;
 }
